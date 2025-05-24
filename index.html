@@ -1,143 +1,403 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tratamento para Diástase – Edna Lopes</title>
-  <link rel="icon" type="image/svg+xml" href="https://abdomesemdiastase.com.br/IMAGES/EDNALOPES.SVG">
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; background: #fff; color: #333; }
-    .container { width: 90%; max-width: 960px; margin: 0 auto; padding: 40px 0; text-align: center; }
-    .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; }
-    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-    .btn { background-color: #92376f; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px;
-           font-weight: bold; display: inline-block; margin: 30px auto 0; transition: transform 0.3s ease, background 0.3s ease; }
-    .btn:hover { background-color: #73295a; transform: scale(1.05); }
-    .carousel { overflow: hidden; margin: 40px auto; max-width: 960px; }
-    .carousel-track { display: flex; animation: scroll 60s linear infinite; }
-    .carousel-slide img { width: 300px; margin: 0 10px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
-    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .faq details { margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; padding: 10px; text-align: left; max-width: 700px; margin-left:auto; margin-right:auto; }
-    .faq summary { font-weight: bold; cursor: pointer; }
-    .faq p { margin-top: 5px; }
-    footer { background: #222; color: #bbb; text-align: center; padding: 20px 0; }
-    footer a { color: #bbb; text-decoration: underline; }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tratamento para Diástase – Edna Lopes</title>
+    <link rel="icon" type="image/svg+xml" href="https://abdomesemdiastase.com.br/IMAGES/EDNALOPES.SVG">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E7E7E9; /* Off-white background */
+            color: #323232; /* Dark gray text */
+        }
+        .container-fluid {
+            padding: 40px 15px;
+        }
+        h1, h2 {
+            color: #323232; /* Dark gray headings */
+            margin-bottom: 25px;
+        }
+        .btn-custom {
+            background-color: #92376f; /* Original button color for brand consistency */
+            color: #FFFFFF;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 30px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #73295a; /* Darker shade on hover */
+            transform: scale(1.05);
+            color: #FFFFFF; /* Keep text white on hover */
+        }
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            background-color: #C3D6DB; /* Light blue-gray placeholder */
+            border-radius: 8px;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            border-radius: 8px;
+        }
+        .card-benefit {
+            background-color: #FFFFFF; /* White card background */
+            border-radius: 8px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            color: #323232;
+        }
+        .card-benefit:hover {
+            transform: translateY(-5px);
+        }
+        .carousel-item img {
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            width: 100%; /* Ensure images fill their carousel slide */
+            height: auto;
+        }
+        .faq-item {
+            background-color: #FFFFFF; /* White accordion item */
+            border: 1px solid #C3D6DB; /* Light blue-gray border */
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .faq-item .accordion-button {
+            background-color: #C3D6DB; /* Light blue-gray for summary/button */
+            color: #323232;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+        .faq-item .accordion-button:not(.collapsed) {
+            background-color: #92376f; /* Darker background when open */
+            color: #FFFFFF;
+        }
+        .faq-item .accordion-body {
+            background-color: #E7E7E9; /* Off-white for body */
+            color: #323232;
+        }
+        footer {
+            background-color: #323232; /* Dark gray footer */
+            color: #E7E7E9; /* Off-white text */
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #C3D6DB; /* Light blue-gray links */
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #FFFFFF;
+        }
+    </style>
 </head>
 <body>
-  <section class="container">
-    <h1>Diástase e Gordura Abdominal Localizada?</h1>
-    <p>Assista ao vídeo e descubra como mais de 4.000 mulheres já transformaram seus corpos com Edna Lopes</p>
-    <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/tA2tjSSXd9c" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <a href="https://wa.me/5511998053382" class="btn">Quero Agendar Minha Avaliação</a>
-  </section>
+    <section class="container-fluid py-5 text-center bg-white">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1>Diástase e Gordura Abdominal Localizada?</h1>
+                <p class="lead text-muted">Assista ao vídeo e descubra como mais de 4.000 mulheres já transformaram seus corpos com Edna Lopes</p>
+                <div class="video-wrapper mb-4">
+                    <iframe src="https://www.youtube.com/embed/your_youtube_video_id_1" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <a href="https://wa.me/5511998053382" class="btn btn-custom btn-lg">Quero Agendar Minha Avaliação</a>
+            </div>
+        </div>
+    </section>
 
- <section id="beneficios" class="container">
-  <h2>Está cansada de conviver com a flacidez abdominal e a baixa autoestima?</h2>
-  <p style="max-width: 720px; margin: 0 auto 30px;">
-    Aqui na <strong>Edna Lopes Estética</strong>, oferecemos um protocolo personalizado para te ajudar a recuperar sua segurança e leveza no espelho — com conforto, segurança e resultados reais.
-  </p>
-  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 800px; margin: 0 auto;">
-    <div style="flex: 1 1 300px; text-align: left;">
-      <p>🌟 <strong>Reduza a diástase</strong> com tecnologia de ponta e acompanhamento profissional</p>
-      <p>💪 <strong>Recupere o tônus e a postura</strong> com tratamentos não invasivos</p>
-      <p>🔥 <strong>Dê adeus à gordura localizada</strong> sem cortes ou cirurgias</p>
-      <p>💖 <strong>Sinta-se mais leve, segura e confiante</strong> com resultados visíveis</p>
-    </div>
-  </div>
-  <a href="https://wa.me/5511998053382" class="btn">Agende Sua Avaliação Agora</a>
-</section>
+    <section id="beneficios" class="container-fluid py-5 text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h2>Está cansada de conviver com a flacidez abdominal e a baixa autoestima?</h2>
+                <p class="mb-5 text-muted mx-auto" style="max-width: 720px;">
+                    Aqui na <strong>Edna Lopes Estética</strong>, oferecemos um protocolo personalizado para te ajudar a recuperar sua segurança e leveza no espelho — com conforto, segurança e resultados reais.
+                </p>
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card-benefit">
+                            <p class="mb-0">🌟 <strong>Reduza a diástase</strong> com tecnologia de ponta e acompanhamento profissional</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card-benefit">
+                            <p class="mb-0">💪 <strong>Recupere o tônus e a postura</strong> com tratamentos não invasivos</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card-benefit">
+                            <p class="mb-0">🔥 <strong>Dê adeus à gordura localizada</strong> sem cortes ou cirurgias</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card-benefit">
+                            <p class="mb-0">💖 <strong>Sinta-se mais leve, segura e confiante</strong> com resultados visíveis</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://wa.me/5511998053382" class="btn btn-custom btn-lg mt-5">Agende Sua Avaliação Agora</a>
+            </div>
+        </div>
+    </section>
 
+    <section class="container-fluid py-5 text-center bg-white">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2>Veja o Depoimento de Quem Já Passou Pelo Tratamento</h2>
+                <div class="video-wrapper mb-4">
+                    <iframe src="https://www.youtube.com/embed/your_youtube_video_id_2" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <a href="https://wa.me/5511998053382" class="btn btn-custom btn-lg">Quero Agendar Minha Avaliação</a>
+            </div>
+        </div>
+    </section>
 
-  <section class="container">
-    <h2>Veja o Depoimento de Quem Já Passou Pelo Tratamento</h2>
-    <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/6dWWuX1ZX3U" frameborder="0" allowfullscreen></iframe>
-    </div>
-    <a href="https://wa.me/5511998053382" class="btn">Quero Agendar Minha Avaliação</a>
-  </section>
+    <section id="depoimentos" class="container-fluid py-5 text-center">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <h2 class="d-flex align-items-center justify-content-center gap-2">
+                    <img src="IMAGES/google.svg" alt="Google Logo" width="30" height="30">
+                    Alguns Depoimentos Sobre Nós no Google
+                </h2>
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center">
+                                <img src="GoogleReview/GoogleReview (1).png" class="d-block mx-2" alt="Depoimento 1" style="max-width: 300px;">
+                                <img src="GoogleReview/GoogleReview (2).png" class="d-block mx-2 d-none d-md-block" alt="Depoimento 2" style="max-width: 300px;">
+                                <img src="GoogleReview/GoogleReview (3).png" class="d-block mx-2 d-none d-lg-block" alt="Depoimento 3" style="max-width: 300px;">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <img src="GoogleReview/GoogleReview (4).png" class="d-block mx-2" alt="Depoimento 4" style="max-width: 300px;">
+                                <img src="GoogleReview/GoogleReview (5).png" class="d-block mx-2 d-none d-md-block" alt="Depoimento 5" style="max-width: 300px;">
+                                <img src="GoogleReview/GoogleReview (6).png" class="d-block mx-2 d-none d-lg-block" alt="Depoimento 6" style="max-width: 300px;">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <img src="GoogleReview/GoogleReview (7).png" class="d-block mx-2" alt="Depoimento 7" style="max-width: 300px;">
+                                <img src="GoogleReview/GoogleReview (8).png" class="d-block mx-2 d-none d-md-block" alt="Depoimento 8" style="max-width: 300px;">
+                                <img src="GoogleReview/GoogleReview (9).png" class="d-block mx-2 d-none d-lg-block" alt="Depoimento 9" style="max-width: 300px;">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <img src="GoogleReview/GoogleReview (10).png" class="d-block mx-2" alt="Depoimento 10" style="max-width: 300px;">
+                                <img src="GoogleReview/GoogleReview (11).png" class="d-block mx-2 d-none d-md-block" alt="Depoimento 11" style="max-width: 300px;">
+                                <img src="GoogleReview/GoogleReview (12).png" class="d-block mx-2 d-none d-lg-block" alt="Depoimento 12" style="max-width: 300px;">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <img src="GoogleReview/GoogleReview (13).png" class="d-block mx-2" alt="Depoimento 13" style="max-width: 300px;">
+                                <img src="GoogleReview/GoogleReview (14).png" class="d-block mx-2 d-none d-md-block" alt="Depoimento 14" style="max-width: 300px;">
+                                <img src="GoogleReview/GoogleReview (15).png" class="d-block mx-2 d-none d-lg-block" alt="Depoimento 15" style="max-width: 300px;">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center">
+                                <img src="GoogleReview/GoogleReview (16).png" class="d-block mx-2" alt="Depoimento 16" style="max-width: 300px;">
+                                <img src="GoogleReview/GoogleReview (17).png" class="d-block mx-2 d-none d-md-block" alt="Depoimento 17" style="max-width: 300px;">
+                                </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <a href="https://wa.me/5511998053382" class="btn btn-custom btn-lg mt-5">Quero Agendar Minha Avaliação</a>
+            </div>
+        </div>
+    </section>
 
-  <section id="depoimentos" class="container">
-    <h2 style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-      <img src="IMAGES/google.svg" alt="Google Logo" width="30" height="30">
-      Alguns Depoimentos Sobre Nós no Google
-    </h2>
-    <div class="carousel">
-      <div class="carousel-track">
-<div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(1).png" alt="Depoimento 1"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(2).png" alt="Depoimento 2"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(3).png" alt="Depoimento 3"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(4).png" alt="Depoimento 4"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(5).png" alt="Depoimento 5"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(6).png" alt="Depoimento 6"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(7).png" alt="Depoimento 7"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(8).png" alt="Depoimento 8"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(9).png" alt="Depoimento 9"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(10).png" alt="Depoimento 10"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(11).png" alt="Depoimento 11"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(12).png" alt="Depoimento 12"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(13).png" alt="Depoimento 13"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(14).png" alt="Depoimento 14"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(15).png" alt="Depoimento 15"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(16).png" alt="Depoimento 16"></div><div class="carousel-slide"><img src="GoogleReview/GoogleReview&#32;(17).png" alt="Depoimento 17"></div>
-      </div>
-    </div>
-    <a href="https://wa.me/5511998053382" class="btn">Quero Agendar Minha Avaliação</a>
-  </section>
+    <section id="avaliacao" class="container-fluid py-5 text-center bg-white">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2>Estamos na Vila Bastos, Santo André</h2>
+                <p class="lead text-muted">Agende sua consulta avaliativa com Edna Lopes agora mesmo!</p>
+                <a href="https://wa.me/5511998053382" class="btn btn-custom btn-lg">Agendar pelo WhatsApp</a>
+            </div>
+        </div>
+    </section>
 
-  <section id="avaliacao" class="container">
-    <h2>Estamos na Vila Bastos, Santo André</h2>
-    <p>Agende sua consulta avaliativa com Edna Lopes agora mesmo!</p>
-    <a href="https://wa.me/5511998053382" class="btn">Agendar pelo WhatsApp</a>
-  </section>
+    <section id="faq" class="container-fluid py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-center">Perguntas Frequentes sobre Diástase Pós-Parto</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item faq-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <strong>1. O que é diástase abdominal?</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                É o afastamento dos músculos retos do abdômen após a gravidez. <a href="https://www.rededorsaoluiz.com.br/maternidade/noticias/artigo/diastase-abdominal-o-que-e-e-como-tratar" target="_blank" class="text-decoration-none" style="color: #92376f;">Rede D'Or</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <strong>2. Quais os principais sintomas?</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Flacidez, saliência na barriga, dores nas costas e fraqueza abdominal. <a href="https://www.unimed.coop.br/site/web/pindamonhangaba/-/diastase-abdominal-aprenda-a-identificar-e-tratar" target="_blank" class="text-decoration-none" style="color: #92376f;">Unimed</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <strong>3. Como saber se tenho diástase?</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Deitada, eleve a cabeça e observe se há um vão ou saliência na linha abdominal. <a href="https://www.vivusfisio.pt/post/12-duvidas-frequentes-sobre-di%C3%A1stase-abdominal" target="_blank" class="text-decoration-none" style="color: #92376f;">VivusFisio</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <strong>4. A diástase pode se fechar sozinha?</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Em alguns casos leves, sim. Mas muitas vezes é necessário tratamento específico. <a href="https://www.rededorsaoluiz.com.br" target="_blank" class="text-decoration-none" style="color: #92376f;">Fonte</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <strong>5. Quais os tratamentos mais indicados?</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Protocolos estéticos personalizados, fisioterapia ou cirurgia em casos extremos. <a href="https://www.unimed.coop.br" target="_blank" class="text-decoration-none" style="color: #92376f;">Fonte</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <strong>6. A diástase pode causar dores?</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sim. Pode provocar dores lombares, posturais e desconforto abdominal. <a href="https://www.vivusfisio.pt" target="_blank" class="text-decoration-none" style="color: #92376f;">Fonte</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item">
+                        <h2 class="accordion-header" id="headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                <strong>7. Pode afetar a autoestima?</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sim. A mudança no contorno corporal e a flacidez afetam a imagem e confiança. <a href="https://www.rededorsaoluiz.com.br" target="_blank" class="text-decoration-none" style="color: #92376f;">Fonte</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item">
+                        <h2 class="accordion-header" id="headingEight">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                <strong>8. Criolipólise trata diástase?</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Não diretamente. Mas ajuda na gordura associada. Para a diástase, é preciso protocolo específico. <a href="https://www.unimed.coop.br" target="_blank" class="text-decoration-none" style="color: #92376f;">Fonte</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item">
+                        <h2 class="accordion-header" id="headingNine">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                                <strong>9. Diástase volta em uma nova gravidez?</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sim, pode voltar. Mas o fortalecimento anterior ajuda a prevenir. <a href="https://www.rededorsaoluiz.com.br" target="_blank" class="text-decoration-none" style="color: #92376f;">Fonte</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item faq-item">
+                        <h2 class="accordion-header" id="headingTen">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                                <strong>10. Quando procurar ajuda?</strong>
+                            </button>
+                        </h2>
+                        <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Se houver dor, desconforto, flacidez ou estética comprometida, procure avaliação. <a href="https://www.unimed.coop.br" target="_blank" class="text-decoration-none" style="color: #92376f;">Fonte</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="faq" class="container">
-  <h2>Perguntas Frequentes sobre Diástase Pós-Parto</h2>
-  <div class="faq" style="text-align: left; max-width: 720px; margin: 0 auto;">
-    <details>
-      <summary><strong>1. O que é diástase abdominal?</strong></summary>
-      <p>É o afastamento dos músculos retos do abdômen após a gravidez. <a href="https://www.rededorsaoluiz.com.br/maternidade/noticias/artigo/diastase-abdominal-o-que-e-e-como-tratar" target="_blank">Rede D'Or</a></p>
-    </details>
-    <details>
-      <summary><strong>2. Quais os principais sintomas?</strong></summary>
-      <p>Flacidez, saliência na barriga, dores nas costas e fraqueza abdominal. <a href="https://www.unimed.coop.br/site/web/pindamonhangaba/-/diastase-abdominal-aprenda-a-identificar-e-tratar" target="_blank">Unimed</a></p>
-    </details>
-    <details>
-      <summary><strong>3. Como saber se tenho diástase?</strong></summary>
-      <p>Deitada, eleve a cabeça e observe se há um vão ou saliência na linha abdominal. <a href="https://www.vivusfisio.pt/post/12-duvidas-frequentes-sobre-di%C3%A1stase-abdominal" target="_blank">VivusFisio</a></p>
-    </details>
-    <details>
-      <summary><strong>4. A diástase pode se fechar sozinha?</strong></summary>
-      <p>Em alguns casos leves, sim. Mas muitas vezes é necessário tratamento específico. <a href="https://www.rededorsaoluiz.com.br" target="_blank">Fonte</a></p>
-    </details>
-    <details>
-      <summary><strong>5. Quais os tratamentos mais indicados?</strong></summary>
-      <p>Protocolos estéticos personalizados, fisioterapia ou cirurgia em casos extremos. <a href="https://www.unimed.coop.br" target="_blank">Fonte</a></p>
-    </details>
-    <details>
-      <summary><strong>6. A diástase pode causar dores?</strong></summary>
-      <p>Sim. Pode provocar dores lombares, posturais e desconforto abdominal. <a href="https://www.vivusfisio.pt" target="_blank">Fonte</a></p>
-    </details>
-    <details>
-      <summary><strong>7. Pode afetar a autoestima?</strong></summary>
-      <p>Sim. A mudança no contorno corporal e a flacidez afetam a imagem e confiança. <a href="https://www.rededorsaoluiz.com.br" target="_blank">Fonte</a></p>
-    </details>
-    <details>
-      <summary><strong>8. Criolipólise trata diástase?</strong></summary>
-      <p>Não diretamente. Mas ajuda na gordura associada. Para a diástase, é preciso protocolo específico. <a href="https://www.unimed.coop.br" target="_blank">Fonte</a></p>
-    </details>
-    <details>
-      <summary><strong>9. Diástase volta em uma nova gravidez?</strong></summary>
-      <p>Sim, pode voltar. Mas o fortalecimento anterior ajuda a prevenir. <a href="https://www.rededorsaoluiz.com.br" target="_blank">Fonte</a></p>
-    </details>
-    <details>
-      <summary><strong>10. Quando procurar ajuda?</strong></summary>
-      <p>Se houver dor, desconforto, flacidez ou estética comprometida, procure avaliação. <a href="https://www.unimed.coop.br" target="_blank">Fonte</a></p>
-    </details>
-  </div>
-</section>
+    <section id="avaliacao-bottom" class="container-fluid py-5 text-center bg-white">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2>Pronta para a Mudança?</h2>
+                <p class="lead text-muted">Agende sua consulta avaliativa com Edna Lopes agora mesmo!</p>
+                <a href="https://wa.me/5511998053382" class="btn btn-custom btn-lg">Agendar pelo WhatsApp</a>
+            </div>
+        </div>
+    </section>
 
-<section id="avaliacao" class="container">
-    <h2>Estamos na Vila Bastos, Santo André</h2>
-    <p>Agende sua consulta avaliativa com Edna Lopes agora mesmo!</p>
-    <a href="https://wa.me/5511998053382" class="btn">Agendar pelo WhatsApp</a>
-  </section>
+    <footer class="mt-5">
+        <div class="container-fluid">
+            <p class="mb-1">&copy; 2025 Edna Lopes Estética | Todos os direitos reservados.</p>
+            <p><a href="https://maps.app.goo.gl/your_Maps_link" target="_blank">Ver Localização no Google Maps</a></p>
+        </div>
+    </footer>
 
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Edna Lopes Estética | Todos os direitos reservados.</p>
-      <p><a href="https://maps.app.goo.gl/nf6GULQ4eurnbPTn8" target="_blank">Ver Localização no Google Maps</a></p>
-    </div>
-  </footer>
-
-  <script src="reviews-edna.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhyUVSEoXEHfGfQxwfG+0i55LqM95dudbFz" crossorigin="anonymous"></script>
+    <script>
+        // Optional: Custom JS for the old carousel animation if needed, or rely solely on Bootstrap's carousel
+        // The original JS for carousel-track animation is removed as Bootstrap handles it.
+        // If you need the continuous scroll effect, it requires a different approach with Bootstrap or a custom JS solution.
+        // For now, Bootstrap's standard carousel (slide by slide) is implemented.
+    </script>
 </body>
 </html>

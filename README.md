@@ -16,16 +16,9 @@ A página apresenta informações sobre diástase abdominal, os benefícios dos 
 * **FAQ (Perguntas Frequentes):** Seção interativa com respostas sobre diástase abdominal.
 * **Informações de Contato e Localização:** Detalhes sobre a localização da clínica e link para o Google Maps.
 
-## Estrutura do Projeto
-
-* `index.html`: O arquivo principal da landing page.
-* `./IMAGES/EDNALOPES.SVG`: Ícone do site.
-* `./IMAGES/google.svg`: Ícone do Google para a seção de depoimentos.
-* `./GoogleReview/`: Diretório contendo as imagens dos depoimentos do Google (e.g., `GoogleReview (1).png`, `GoogleReview (2).png`, etc.).
-* `reviews-edna.js`: Arquivo JavaScript para o carrossel de depoimentos (não fornecido no `index.html`, mas referenciado).
-
 ## Como Visualizar
-
+(https://viniloppes.github.io/SPA_EDNA_LOPES_AB_SEM_DIASTASE/)
+ou
 Basta abrir o arquivo `index.html` em qualquer navegador web.
 
 ## Contato
